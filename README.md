@@ -66,7 +66,7 @@ Assessment results can be exported as:
 - PDF (future roadmap)
 
 ---
-📦 5. Automated Setup & Execution Script
+### **📦 5. Automated Setup & Execution Script
 
 The toolkit includes a one-stop orchestration script that runs all core technical checks and generates a full readiness report bundle.
 
@@ -75,11 +75,12 @@ run_ir_toolkit_setup.ps1
 
 This script is designed for SMEs, IT admins, and auditors to quickly assess Microsoft 365 and Windows endpoint readiness with minimal manual steps.
 
-🚀 What the Script Does
+### **🚀 What the Script Does
 
 When executed from the repository root, the script automatically:
 
 Creates a ./reports folder (if not present)
+
 
 Optionally installs required dependencies
 
@@ -95,30 +96,32 @@ dnspython
 
 Runs all core readiness checks
 
-Mailbox Rule Scanner → Detects BEC indicators
+### ** Mailbox Rule Scanner → Detects BEC indicators
 
 Output: MailboxRulesReport.csv
 
-MFA & Admin Role Check → Finds admin accounts without MFA
+### ** MFA & Admin Role Check → Finds admin accounts without MFA
 
 Output: MFA_AdminRole_Report.csv
 
-Windows Logging Readiness Check → Verifies audit/logging posture
+### ** Windows Logging Readiness Check → Verifies audit/logging posture
 
 Output: WindowsLoggingReadinessReport.csv
 
-Email Authentication Check (SPF/DMARC/DKIM)
+### ** Email Authentication Check (SPF/DMARC/DKIM)
 
 Output: Email_Auth_Posture_Report.csv
 
 All results are saved to the ./reports folder.
 
-🧭 Usage
+### **🧭 Usage
 Basic run (recommended)
 .\run_ir_toolkit_setup.ps1 -Domain example.com
 
+
 Install all required dependencies automatically
 .\run_ir_toolkit_setup.ps1 -Domain example.com -InstallDependencies
+
 
 Specify a custom Python path (optional)
 .\run_ir_toolkit_setup.ps1 -Domain example.com -PythonPath "C:\Python311\python.exe"
@@ -137,6 +140,7 @@ MFA_AdminRole_Report.csv
 WindowsLoggingReadinessReport.csv
 
 Email_Auth_Posture_Report.csv
+
 
 These reports can be fed directly into:
 
